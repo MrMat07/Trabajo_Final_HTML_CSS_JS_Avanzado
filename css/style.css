@@ -1,0 +1,325 @@
+/* Variables de CSS */
+:root {
+    /* Colores */
+    /*  Color azul del fondo :  */
+    --color-fondo-azul: #181D31;
+    /* Color crema / beige : */
+    --color-crema: #E6DDC4;
+    /* Color sombra verde : */
+    --color-sombra-verde: #678983;
+    /*  Color recuadro gris del juego:  */
+    --color-juego-gris: rgb(128,128,128);
+    /* Color negro del reproductor */
+    --color-panel-reproductor-negro: #1d1d1d;
+
+    /*  Color del logo SVG: 
+    color azulado: */
+    --color-svg-azul: #495579;
+    /* color crema */
+    --color-svg-crema: #F0E9D2;
+
+    /* Color del texto : 
+    Color blancuzco -beige párrafos */
+    --color-parrafo-beige: #E6DDC4;
+    /* Color verde titulos  */
+    --color-titulos-verde: #678983;
+    /* Color blanco titulo principal */
+    --color-titulo-principal: #EEEEEE;
+
+    /* Sombras del titulo principal: 
+    color negro: */
+    --color-sombra-titulo-negro: #000000;
+    /* color gris: */
+    --color-sombra-titulo-gris: rgb(128,128,128);
+  }
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: auto 0px;
+}
+
+
+.bodyDark{
+    background-color: var(--color-fondo-azul);
+    color: var(--color-parrafo-beige);
+}
+
+.bodyWhite{
+    background-color: var(--color-crema);
+    color: var(--color-fondo-azul);
+}
+
+/* ---------------------------------------- Seccion Nav ------------------------------------------------------------ */
+#logo{
+    width: 200px;
+    height: 80px;
+    color: var(--color-crema);
+}
+
+.navPage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 40px;
+}
+
+.menu{
+    display: flex;
+    width: 300px;
+    justify-content: space-around;
+}
+
+.itemMenu {
+    list-style-type: none;
+}
+
+.itemLink, .botonesVideo {
+    box-shadow: 2px 3px var(--color-sombra-verde);
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    background-color: var(--color-crema);
+    color: var(--color-fondo-azul);
+    font-weight: 300;
+}
+
+.botonesVideo:active, .aTarjeta:active,.itemMenu:active,.itemLink:active {
+    transform: translate(2px,3px);
+    box-shadow: none;
+}
+
+/* ---------------------------------------- Fin Seccion Nav -------------------------------------------------------- */
+
+/* ---------------------------------------- Seccion Header --------------------------------------------------------- */
+header{
+    background: url(../assets/img/codigo.jpg) 50% 0 fixed;
+    background-size: cover;
+    min-height: 500px;
+    color: var(--color-titulo-principal);
+    font-size: 28px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 100px;
+}
+
+.tituloPrincipal{
+    text-align: center;
+    text-shadow: 2px 2px var(--color-sombra-titulo-gris), 6px 6px var(--color-sombra-titulo-negro);
+}
+/* ---------------------------------------- Fin Seccion Header ----------------------------------------------------- */
+
+
+/* ---------------------------------------- Div Titulo Secundario -------------------------------------------------- */
+h2 {
+    text-shadow: 2px 2px var(--color-sombra-titulo-negro);
+    font-size: 40px;
+    text-align: center;
+    color: var(--color-titulos-verde);
+}
+/* ---------------------------------------- Fin Div Titulo Secundario ---------------------------------------------- */
+
+
+/* ---------------------------------------- Seccion Main ----------------------------------------------------------- */
+main {
+    padding: 100px 20px;
+}
+
+.mainPage{
+    margin: 100px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.tarjeta{
+    width: 350px;
+    height: 400px;
+    border: 5px solid var(--color-sombra-verde);
+    background-color: var(--color-crema);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imgTarjeta{
+    width: 100%;
+    margin: 0px;
+}
+
+.pTarjeta{
+    width: 90%;
+    text-align: center;
+    height: 30px;
+    color: var(--color-fondo-azul);
+}
+
+.aTarjeta{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--color-fondo-azul);
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 2px 3px var(--color-sombra-verde);
+    text-align: center;
+    text-decoration: none;
+    width: 40%;
+    margin-bottom: 20px;
+    color: var(--color-titulo-principal);
+}
+/* ---------------------------------------- Fin Seccion Main ------------------------------------------------------- */
+
+
+/* ---------------------------------------- Seccion Footer --------------------------------------------------------- */
+.footerPage{
+    background-color: var(--color-titulos-verde);
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    color: var(--color-fondo-azul);
+}
+
+.footerLeft{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    height: 60px;
+}
+
+.footerLeft img{
+    height: 80px;
+}
+
+.footerLeft h3{
+    text-align: center;
+    font-size: 14px;
+}
+/* ---------------------------------------- Fin Seccion Footer ----------------------------------------------------- */
+
+
+/* ====================================================================================================================
+******************************************** Pagina Historia ********************************************************** 
+=====================================================================================================================*/
+/* ---------------------------------------- Seccion Main Historias ------------------------------------------------- */
+.mainHistoria{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjetaHistoria{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px 50px;
+    gap: 20px;
+}
+
+.pHistoria{
+    width: 45%;
+}
+/* ---------------------------------------- Fin Seccion Main Historias --------------------------------------------- */
+
+/* ---------------------------------------- Seccion Video Historias ------------------------------------------------ */
+.contenedorVideo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0px;
+}
+
+video{
+    width: 100%;
+}
+
+.reproductor{
+    padding: 5px;
+    background-color: var(--color-sombra-titulo-negro);
+    width: 70%;
+}
+
+.panel{
+    background-color: var(--color-panel-reproductor-negro);
+    border-radius: 10px;
+    padding: 2px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.botones{
+    display: flex;
+    gap: 20px;
+}
+
+.barraProgreso{
+    flex-grow: 1;   
+}
+
+#play, #stop {
+    width: 80px;
+}
+#stop img{
+    width: 12px;
+}
+
+.duracion{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-titulo-principal);
+}
+/* ---------------------------------------- Fin Seccion Video Historias -------------------------------------------- */
+
+/* ====================================================================================================================
+******************************************** Pagina Juego ************************************************************* 
+=====================================================================================================================*/
+/* ---------------------------------------- Seccion Juego ----------------------------------------------------- */
+.juego {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cajas {
+    display: flex;
+    flex-direction: row;
+}
+
+.caja {
+    width: 275px;
+    height: 400px;
+    display: flex;
+    border: 2px solid var(--color-sombra-titulo-negro);
+    background-color: var(--color-juego-gris);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.caja:hover{
+    background-color: var(--color-panel-reproductor-negro);
+}
+
+#cajasPartes {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 40px;
+}
+
+#img1, #img2, #img3 {
+    width: 275px;
+    height: 400px;
+}
+
+.reinicio {
+    display: flex;
+    margin: auto;
+    padding: 10px 100px;
+}
+/* ------------------------------------ Fin Seccion Main Juego ----------------------------------------------------- */

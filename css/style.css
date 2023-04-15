@@ -38,6 +38,21 @@
     margin: auto 0px;
 }
 
+svg{
+    width: 200px;
+    height: 80px
+}
+
+.pcGris {
+    animation: visible1 ease-in 5s;
+    animation-iteration-count: 1;
+}
+
+.pcAzul {
+    animation: visible2 ease-in 5s;
+    animation-iteration-count: 1;
+}
+
 
 .bodyDark{
     background-color: var(--color-fondo-azul);
@@ -323,3 +338,51 @@ video{
     padding: 10px 100px;
 }
 /* ------------------------------------ Fin Seccion Main Juego ----------------------------------------------------- */
+
+/* ************************************ Animaciones **************************************************************** */
+@keyframes visible1{
+    0% {
+        transform: translate(0,-10px);
+        opacity: 0;
+    }
+    20% {
+        transform: translate(0,-10px);
+        opacity: 0;
+    }
+    30% {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+    
+    90% {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}
+
+@keyframes visible2 {
+    0% {
+        transform: translate(0,-10px);
+        opacity: 0;
+    }
+    30% {
+        transform: translate(0,-10px);
+        opacity: 0;
+    }
+    40% {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+    90% {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}

@@ -9,7 +9,7 @@
     <title>Proyecto-Final: Historia</title>
   </head>
   <body class="bodyDark">
-    <nav class="navPage">
+    <nav class="navPage flexSpaceBetween">
       <a id="logo" href="../index.html"> 
         <svg >
           <rect x="45" y="5" width="60" height="35" rx="5" class="pcGris" fill="#F0E9D2"></rect>
@@ -22,7 +22,7 @@
           <polygon points="57 48 ,92 48,104 58,43 58" fill="#495579" class="pcAzul"></polygon>
       </svg>
       </a>
-      <ul class="menu">
+      <ul class="menu flexSpaceAround">
         <li class="itemMenu">
           <a class="itemLink" href="./historia.html">HISTORIA</a>
         </li>
@@ -31,33 +31,33 @@
         </li>
       </ul>
     </nav>
-    <header>
+    <header class="flexSpaceAround">
       <h1 class="tituloPrincipal">JUGUEMOS UN POCO</h1>
     </header>
     <main class="mainJuego">
         <h2 class="subtitulo">Armemos el rompecabezas y veamos que imagen es...</h2>
-        <section class="juego">
+        <section class="juego flexColumnCenter">
             <div class="cajas">
-                <div class="caja" id="posicion1">
+                <div class="caja flexColumnCenter" id="posicion1">
                     <p>Arrastre y suelte la imágene aquí</p>
                 </div>
-                <div class="caja" id="posicion2">
+                <div class="caja flexColumnCenter" id="posicion2">
                     <p>Arrastre y suelte la imágene aquí</p>
                 </div>
-                <div class="caja" id="posicion3">
+                <div class="caja flexColumnCenter" id="posicion3">
                     <p>Arrastre y suelte la imágene aquí</p>
                 </div>
             </div>
             <div id="cajasPartes">
-                <img id="img1" src="../assets/img/Rompe3.png" alt="imagen-rompecabezas">
-                <img id="img2" src="../assets/img/Rompe1.png" alt="imagen-rompecabezas">
-                <img id="img3" src="../assets/img/rompe2.png" alt="imagen-rompecabezas">
+                <img id="img1" src="../assets/img/Rompe3.png" alt="Imagen Rompecabezas Parte 3">
+                <img id="img2" src="../assets/img/Rompe1.png" alt="Imagen Rompecabezas Parte 1">
+                <img id="img3" src="../assets/img/rompe2.png" alt="Imagen Rompecabezas Parte 2">
             </div>
             <button class="botonesVideo reinicio">Reiniciar</button>
         </section>
     </main>
-    <footer class="footerPage">
-      <div class="footerLeft">
+    <footer class="footerPage flexSpaceBetween">
+      <div class="footerLeft flexSpaceBetween">
         <img src="../assets/img/logo.png" alt="logo" />
         <h3>
           PROGRAMACION
@@ -68,7 +68,7 @@
         </h3>
       </div>
       <div class="footerRight">
-        Sitio con fines educativos - Creado por MatDev
+        <p>Sitio con fines educativos - Creado por MatDev</p> 
       </div>
     </footer>
     <script src="../js/script.js"></script>

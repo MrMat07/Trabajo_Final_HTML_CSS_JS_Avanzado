@@ -9,7 +9,7 @@
     <title>Proyecto-Final</title>
 </head>
 <body class="bodyDark">
-    <nav class="navPage">
+    <nav class="navPage flexSpaceBetween">
         <a id="logo" href="./index.html">
             <svg >
                 <rect x="45" y="5" width="60" height="35" rx="5" class="pcGris" fill="#F0E9D2"></rect>
@@ -22,31 +22,31 @@
                 <polygon points="57 48 ,92 48,104 58,43 58" fill="#495579" class="pcAzul"></polygon>
             </svg>
         </a>
-        <ul class="menu">
+        <ul class="menu flexSpaceAround">
             <li class="itemMenu"><a class="itemLink" href="./pages/historia.html">HISTORIA</a></li>
             <li class="itemMenu"><a class="itemLink" href="./pages/juego.html">JUGUEMOS</a></li>
         </ul>
     </nav>
-    <header>
+    <header class="flexSpaceAround">
         <h1 class="tituloPrincipal">PROGRAMACION E HISTORIA</h1>
     </header>
     <div class="contTituloSecundario">
         <h2 class="subtitulo">CONTENIDO</h2>
     </div>
-    <main class="mainPage">
-        <div class="tarjeta">
-           <img class="imgTarjeta" src="./assets/img/img1.jpg" alt="">
-           <p class="pTarjeta">Conozcamos Un poco sobre la historia de la programacion</p>
+    <main class="mainPage flexSpaceEvenly">
+        <div class="tarjeta flexSpaceBetween">
+           <img class="imgTarjeta" src="./assets/img/img1.jpg" alt="Imagen Historia de la Programación">
+           <p class="pTarjeta">Conozcamos un poco sobre la historia de la programacion</p>
            <a class="aTarjeta" href="./pages/historia.html">Ir a Historia</a> 
         </div>
-        <div class="tarjeta">
-            <img class="imgTarjeta" src="./assets/img/img2.jpg" alt="">
+        <div class="tarjeta flexSpaceBetween">
+            <img class="imgTarjeta" src="./assets/img/img2.jpg" alt="Imagen Juego Sobre la Computación">
             <p class="pTarjeta">Juguemos un poco sobre la computacion</p>
             <a class="aTarjeta" href="./pages/juego.html">Ir a juego</a> 
          </div>
     </main>
-    <footer class="footerPage">
-        <div class="footerLeft">
+    <footer class="footerPage flexSpaceBetween">
+        <div class="footerLeft flexSpaceBetween">
             <img src="./assets/img/logo.png" alt="logo">
             <h3>
                 PROGRAMACION 
@@ -57,7 +57,7 @@
             </h3>
         </div>
         <div class="footerRight">
-            Sitio con fines educativos - Creado por MatDev
+            <p>Sitio con fines educativos - Creado por MatDev</p> 
         </div>
     </footer>
     <script src="./js/script.js"></script>

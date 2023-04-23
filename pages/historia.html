@@ -9,7 +9,7 @@
     <title>Proyecto-Final: Historia</title>
   </head>
   <body class="bodyDark">
-    <nav class="navPage">
+    <nav class="navPage flexSpaceBetween">
       <a id="logo" href="../index.html"> 
         <svg >
           <rect x="45" y="5" width="60" height="35" rx="5" class="pcGris" fill="#F0E9D2"></rect>
@@ -22,7 +22,7 @@
           <polygon points="57 48 ,92 48,104 58,43 58" fill="#495579" class="pcAzul"></polygon>
       </svg> 
       </a>
-      <ul class="menu">
+      <ul class="menu flexSpaceAround">
         <li class="itemMenu">
           <a class="itemLink" href="./historia.html">HISTORIA</a>
         </li>
@@ -31,11 +31,11 @@
         </li>
       </ul>
     </nav>
-    <header>
+    <header class="flexSpaceAround">
       <h1 class="tituloPrincipal">HISTORIA DE LA PROGRAMACION</h1>
     </header>
-    <main class="mainHistoria">
-      <div class="tarjetaHistoria">
+    <main class="mainHistoria flexColumnCenter">
+      <div class="tarjetaHistoria flexSpaceAround">
         <h2>El principio de la historia de la programación</h2>
         <p class="pHistoria">
           El primer lenguaje de programación fue un algoritmo creado por Ada
@@ -46,7 +46,7 @@
           Turing. Church expresó el cálculo lambda de forma formulativa.
         </p>
       </div>
-      <div class="tarjetaHistoria">
+      <div class="tarjetaHistoria flexSpaceAround">
         <p class="pHistoria">
           Los primeros ordenadores modernos (alimentados eléctricamente) fueron
           creados en los años 40. Estas computadoras estaban limitadas en
@@ -62,7 +62,7 @@
         </p>
         <h2>Lenguaje de ensamblaje</h2>
       </div>
-      <div class="tarjetaHistoria">
+      <div class="tarjetaHistoria flexSpaceAround">
         <h2>Los primeros lenguajes de programación</h2>
         <div>
           <p>
@@ -110,14 +110,14 @@
         </div>
       </div>
     </main>
-    <article class="contenedorVideo">
+    <article class="contenedorVideo flexColumnCenter">
       <h2>Un breve video para complementar lo visto</h2>
       <section class="reproductor">
         <video poster="../assets/img/img-video.jpg" onclick="playPause()" ontimeupdate="setProgresoVideo()">
           <source src="../assets/video/historia-Comp.mp4" type="video/mp4">
           <source src="../assets/video/historia-Comp.ogv" type="video/ogv">
         </video>
-        <div class="panel">
+        <div class="panel flexSpaceBetween">
           <div class="botones">
             <button id="play"class="botonesVideo" onclick="playPause()">
               <img src="../assets/img/play.svg" alt="Iniciar el video">
@@ -133,8 +133,8 @@
         </div>
       </section>
     </article>
-    <footer class="footerPage">
-      <div class="footerLeft">
+    <footer class="footerPage flexSpaceBetween">
+      <div class="footerLeft flexSpaceBetween">
         <img src="../assets/img/logo.png" alt="logo" />
         <h3>
           PROGRAMACION
@@ -145,7 +145,7 @@
         </h3>
       </div>
       <div class="footerRight">
-        Sitio con fines educativos - Creado por MatDev
+        <p>Sitio con fines educativos - Creado por MatDev</p> 
       </div>
     </footer>
     <script src="../js/script.js"></script>

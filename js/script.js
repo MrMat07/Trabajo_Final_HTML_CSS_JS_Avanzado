@@ -10,6 +10,7 @@ const barraProgreso = document.querySelector(".barraProgreso");
 
 
 // Utility functions
+// Video Player******************************************************************
 const playPause=()=>{
     if(video.paused){
         video.play();
@@ -17,8 +18,7 @@ const playPause=()=>{
         video.pause();
     }
     cambiarIconoPlayPausa();
-    // setDuracionVideo();
-}
+};
 
 const cambiarIconoPlayPausa=()=>{
     if(video.paused){
@@ -26,18 +26,18 @@ const cambiarIconoPlayPausa=()=>{
     }else{
         play.setAttribute("src","../assets/img/pausa.svg");
     }
-}
+};
 
 const stopVideo=()=>{
     video.pause();
     video.currentTime=0;
     cambiarIconoPlayPausa();
     barraProgreso.value=video.currentTime;
-}
+};
 
 const setProgreso=(e)=>{
     video.currentTime = (e.value * video.duration) / 100;
-}
+};
 
 const setProgresoVideo=()=>{
     barraProgreso.value = (video.currentTime / video.duration) * 100;
@@ -58,7 +58,7 @@ const setProgresoVideo=()=>{
     if(video.ended){
         stopVideo();
     }
-}
+};
 
 const setDuracionVideo=()=>{
     let minutosVideo = Math.floor(video.duration / 60);
@@ -72,7 +72,8 @@ const setDuracionVideo=()=>{
         segundosVideo=`0${segundosVideo}`;
     }
     timerVideo.textContent = `${minutosVideo}:${segundosVideo}`;
-}
+};
+// Video Player******************************************************************
 
 // Execute Fuctions
 setTimeout(setDuracionVideo(),2000);

@@ -38,22 +38,22 @@
         <h2 class="subtitulo">Armemos el rompecabezas y veamos que imagen es...</h2>
         <section class="juego flexColumnCenter">
             <div class="cajas">
-                <div class="caja flexColumnCenter" id="posicion1">
+                <div class="caja flexColumnCenter" id="posicion1" ondragover="evitarAccionDeault(event)" ondrop="soltarParte(event)">
                     <p>Arrastre y suelte la imágene aquí</p>
                 </div>
-                <div class="caja flexColumnCenter" id="posicion2">
+                <div class="caja flexColumnCenter" id="posicion2" ondragover="evitarAccionDeault(event)" ondrop="soltarParte(event)">
                     <p>Arrastre y suelte la imágene aquí</p>
                 </div>
-                <div class="caja flexColumnCenter" id="posicion3">
+                <div class="caja flexColumnCenter" id="posicion3" ondragover="evitarAccionDeault(event)" ondrop="soltarParte(event)">
                     <p>Arrastre y suelte la imágene aquí</p>
                 </div>
             </div>
             <div id="cajasPartes">
-                <img id="img1" src="../assets/img/Rompe3.png" alt="Imagen Rompecabezas Parte 3">
-                <img id="img2" src="../assets/img/Rompe1.png" alt="Imagen Rompecabezas Parte 1">
-                <img id="img3" src="../assets/img/rompe2.png" alt="Imagen Rompecabezas Parte 2">
+                <img class="imgJuego" src="../assets/img/Rompe3.png" alt="Imagen Rompecabezas Parte 3" ondragstart="moverPartes(event)" ondragend="finMoverPartes(event)">
+                <img class="imgJuego" src="../assets/img/Rompe1.png" alt="Imagen Rompecabezas Parte 1" ondragstart="moverPartes(event)" ondragend="finMoverPartes(event)">
+                <img class="imgJuego" src="../assets/img/rompe2.png" alt="Imagen Rompecabezas Parte 2" ondragstart="moverPartes(event)" ondragend="finMoverPartes(event)">
             </div>
-            <button class="botonesVideo reinicio">Reiniciar</button>
+            <button class="botonesVideo reinicio" onclick="reiniciarJuego()">Reiniciar</button>
         </section>
     </main>
     <footer class="footerPage flexSpaceBetween">
@@ -71,6 +71,6 @@
         <p>Sitio con fines educativos - Creado por MatDev</p> 
       </div>
     </footer>
-    <script src="../js/script.js"></script>
+    <script src="../js/game.js"></script>
   </body>
 </html>

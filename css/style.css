@@ -311,7 +311,7 @@ video{
     margin: 40px;
 }
 
-#img1, #img2, #img3 {
+.imgJuego {
     width: 275px;
     height: 400px;
 }

@@ -59,8 +59,8 @@ svg{
     color: var(--color-parrafo-beige);
 }
 
-.bodyWhite{
-    background-color: var(--color-crema);
+.bodyLight{
+    background-color: var(--color-titulo-principal);
     color: var(--color-fondo-azul);
 }
 
@@ -116,10 +116,40 @@ svg{
     font-weight: 300;
 }
 
-.botonesVideo:active, .aTarjeta:active,.itemMenu:active,.itemLink:active {
+.botonesVideo:active, .aTarjeta:active,.itemMenu:active,.itemLink:active,.lightButton:active,.darkButton:active {
     transform: translate(2px,3px);
     box-shadow: none;
 }
+
+.buttonMode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    width: 70px;
+    cursor: pointer;
+    box-shadow: 2px 3px var(--color-sombra-verde);
+  }
+  
+  .lightButton {
+    background-color: var(--color-fondo-azul);
+    border: 1px solid var(--color-fondo-azul);
+    color: var(--color-titulo-principal);
+  }
+  .lightButton:hover {
+    background-color: var(--color-titulo-principal);
+    color: var(--color-fondo-azul);
+  }
+  
+  .darkButton {
+    background-color: var(--color-titulo-principal);
+    border: 1px solid var(--color-titulo-principal);
+    color: var(--color-fondo-azul);
+  }
+  .darkButton:hover {
+    background-color: var(--color-fondo-azul);
+    color: var(--color-titulo-principal);
+  }
 
 /* ---------------------------------------- Fin Seccion Nav -------------------------------------------------------- */
 

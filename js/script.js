@@ -1,79 +1,37 @@
 // DOM elements
-const video = document.querySelector("video");
-const timer = document.querySelector("#timer");
-const timerVideo = document.querySelector("#timerVideo");
-const playButton = document.querySelector("#play");
-const play = playButton.querySelector("img");
-const stopButton = document.querySelector("#stop");
-const stop = stopButton.querySelector("img");
-const barraProgreso = document.querySelector(".barraProgreso");
-
+const modeButton = document.querySelector('#mode');
+const body = document.querySelector('body');
 
 // Utility functions
-// Video Player******************************************************************
-const playPause=()=>{
-    if(video.paused){
-        video.play();
-    }else{
-        video.pause();
+const clickMode=(e)=>{
+    if(body.className=='bodyLight'){
+        e.textContent=`Light`;
+        e.classList.replace('lightButton','darkButton');
+        body.classList.replace('bodyLight','bodyDark');
+        localStorage.setItem('mode','dark');
     }
-    cambiarIconoPlayPausa();
-};
-
-const cambiarIconoPlayPausa=()=>{
-    if(video.paused){
-        play.setAttribute("src","../assets/img/play.svg");
-    }else{
-        play.setAttribute("src","../assets/img/pausa.svg");
+    else{
+        e.textContent=`Dark`;
+        e.classList.replace('darkButton','lightButton');
+        body.classList.replace('bodyDark','bodyLight');
+        localStorage.setItem('mode','light');
     }
 };
 
-const stopVideo=()=>{
-    video.pause();
-    video.currentTime=0;
-    cambiarIconoPlayPausa();
-    barraProgreso.value=video.currentTime;
-};
+const inicio =()=>{
+    let mode = localStorage.getItem('mode');
 
-const setProgreso=(e)=>{
-    video.currentTime = (e.value * video.duration) / 100;
-};
-
-const setProgresoVideo=()=>{
-    barraProgreso.value = (video.currentTime / video.duration) * 100;
-
-    let minutos = Math.floor(video.currentTime / 60);
-    let segundos = Math.floor(video.currentTime % 60);
-
-    if(minutos < 10){
-        minutos = `0${minutos}`;
+    if(mode=='light'){
+        modeButton.textContent=`Dark`;
+        modeButton.classList.toggle('lightButton');
+        body.classList.toggle('bodyLight');
     }
-    
-    if(segundos < 10){
-        segundos=`0${segundos}`;
+    else{
+        modeButton.textContent=`Light`;
+        modeButton.classList.toggle('darkButton');
+        body.classList.toggle('bodyDark');
     }
-
-    timer.textContent = `${minutos}:${segundos}`;
-
-    if(video.ended){
-        stopVideo();
-    }
-};
-
-const setDuracionVideo=()=>{
-    let minutosVideo = Math.floor(video.duration / 60);
-    let segundosVideo = Math.floor(video.duration % 60);
-
-    if(minutosVideo < 10){
-        minutosVideo = `0${minutosVideo}`;
-    }
-    
-    if(segundosVideo < 10){
-        segundosVideo=`0${segundosVideo}`;
-    }
-    timerVideo.textContent = `${minutosVideo}:${segundosVideo}`;
-};
-// Video Player******************************************************************
+}
 
 // Execute Fuctions
-setTimeout(setDuracionVideo(),2000);
+inicio()
